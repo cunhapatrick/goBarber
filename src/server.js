@@ -3,7 +3,6 @@ const express = require('express')
 const session = require('express-session')
 // module to store on fisical json
 const FileStore = require('session-file-store')(session)
-const nunjucks = require('nunjucks')
 // module to treat paths from diferent SO's
 const path = require('path')
 const flash = require('connect-flash')
@@ -42,18 +41,11 @@ class App {
 
   // method to treat views
   views () {
-    // configuration of nunjucks engine view
-    nunjucks.configure(path.resolve(__dirname, 'app', 'views'), {
-      watch: this.isDev,
-      express: this.express,
-      autoescape: true
-    })
-
     // make the public directory visible to express
     this.express.use(express.static(path.resolve(__dirname, 'public')))
-
     // declare the engine to render the views
-    this.express.set('view engine', 'njk')
+    this.express.set('view engine', 'pug')
+    this.express.set('views', path.resolve(__dirname, 'app', 'views'))
   }
 
   // method to treat routes

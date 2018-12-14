@@ -1,0 +1,17 @@
+extends layout/default
+
+block body
+  div(class="content")
+  strong Olá,#{user.name}
+  p Inicie um agendamento escolhendo um profissional abaixo:
+
+  ul(class="providers")
+    for provider in providers
+      li(class="provider")
+        div
+          img(src=`/files/${provider.avatar}`)/
+          strong #{provider.name}
+        a(href=`/app/appointments/new/${provider.id}`) +
+  
+  a(href="/app/logout", class="logout") Sair
+

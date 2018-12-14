@@ -1,0 +1,7 @@
+- for hour in available
+  - const x = (hour.avaiable === false) ? 'disabled' : ''
+   label(class=#{x}, for=`time-${hour.time}`) #{hour.time}
+      - if hour.available===true
+          input(id=`time-${hour.time}`, name="date" value=#{hour.value} type="radio")
+      
+    

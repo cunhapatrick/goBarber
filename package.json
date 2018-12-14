@@ -6,10 +6,6 @@
   "scripts": {
     "start": "nodemon src/index.js -e js"
   },
-  "engines": {
-    "node": "10.14.2",
-    "npm": "6.4.1"
-  },
   "devDependencies": {
     "eslint": "^5.9.0",
     "eslint-config-standard": "^12.0.0",
@@ -23,12 +19,12 @@
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "express": "^4.16.4",
+    "express-ejs-extend": "^0.0.1",
     "express-session": "^1.15.6",
     "moment": "^2.22.2",
     "multer": "^1.4.1",
     "mysql2": "^1.6.4",
-    "nunjucks": "^3.1.4",
-    "pg": "^7.6.1",
+    "pug": "^2.0.3",
     "sequelize": "^4.41.2",
     "session-file-store": "^1.2.0"
   }
