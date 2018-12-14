@@ -4,11 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/index.js -e js"
+    "start": "node src/index.js -e js",
+    "dev":"nodemon src/index.js -e js"
   },
   "engines": {
     "node": ">=11.3.0",
-    "yarn": ">=1.12.3"
+    "yarn": ">=1.12.3",
+    "npm": ">=6.4.1"
   },
   "devDependencies": {
     "eslint": "^5.9.0",
