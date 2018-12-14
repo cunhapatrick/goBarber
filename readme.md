@@ -10,7 +10,7 @@
 ```
 
 3. `$ yarn nodemon sequelize-cli eslint -D && yarn eslint --init`
-4. `$ yarn bcryptjs express express-session session-file-store ejs mysql2 multer`
+4. `$ yarn bcryptjs express express-session session-file-store pug mysql2 multer`
 5. `$ yarn sequelize init` and configure the created files
 
 ## Database
